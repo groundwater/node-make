@@ -12,13 +12,16 @@ mu.root = __dirname + '/../templates'
 
 function compile(data){
 	var templ = [];
-	data.split(/\n\n/).forEach(function(stanza){
+	data.split(/\n{2,}/).forEach(function(stanza){
 		
 		var lines = stanza.split(/\n/)
 		var heads = lines.shift().trim().split(':')
 		
 		var head = heads[0];
 		var deps = [];
+		
+		if(!head) return;
+		
 		heads[1].trim().split(/\s+/).forEach(function(line){
 			if(line=='') return;
 			deps.push({item:line});
