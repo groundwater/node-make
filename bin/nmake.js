@@ -37,7 +37,7 @@ function compile(data){
 
 function render(code,next){
 	var temp = '';
-	var rend = mu.compileAndRender('node.coffee', {NMAKEFILE: compile(code)})
+	var rend = mu.compileAndRender(comm.template, {NMAKEFILE: compile(code)})
 	rend.on('data', function (data) {
 		temp += data;
 	})
@@ -77,6 +77,7 @@ function make(file){
 comm.version('0.0.0')
 comm.option('-c, --compile'          ,'compile to coffee script but do not execute')
 comm.option('-f, --nmakefile <FILE>' ,'use FILE as NMakefile','NMakefile')
+comm.option('-t, --template <NAME>'  ,'use the template type NAME', 'node.coffee')
 
 comm.parse(process.argv)
 
