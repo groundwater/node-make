@@ -76,7 +76,7 @@ var failure = function(){
 
 var info = function(){
 	util.format.apply(null,arguments).split(/\n/).forEach(function(line){
-		console.log('       | ' + line)
+		console.log('     | '.white + line)
 	})
 }
 
