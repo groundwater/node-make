@@ -18,7 +18,8 @@
     "async": "~0.1.22",
     "colors": "~0.6.0-1",
     "mu2": "~0.5.17",
-    "commander": "~1.0.5"
+    "commander": "~1.0.5",
+    "coffee-script": "~1.4.0"
   },
   "bin": {
     "nmake": "bin/nmake.js"

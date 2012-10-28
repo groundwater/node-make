@@ -54,7 +54,10 @@ function render(code,next){
 
 function evalt(data){
 	
-	var cf = cp.spawn('coffee',['-s'],{stdio: ['pipe',process.stdout,process.stderr]});
+	var coffee = __dirname + '/../node_modules/.bin/coffee'
+	var cf = cp.spawn(coffee,['-s'],{
+		stdio : ['pipe',process.stdout,process.stderr]
+	});
 	cf.stdin.write(data)
 	cf.stdin.destroy()
 	cf.on('exit',function(code){
