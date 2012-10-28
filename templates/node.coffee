@@ -1,7 +1,8 @@
 nmake = require 'nmake'
 
 make = new nmake.Make()
-info = nmake.info
+
+{{> commands.coffee}}
 
 {{#NMAKEFILE}}
 make.target '{{head}}', [{{#deps}}'{{item}}'{{/deps}}], (next) ->

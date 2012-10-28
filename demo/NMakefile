@@ -4,6 +4,7 @@ release: init
 
 init:
 	info 'Make Init'
+	npm install
 	next()
 
 default: release

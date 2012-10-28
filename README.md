@@ -26,8 +26,9 @@ Run `nmake` from any directory containing an `NMakefile`:
 
 ## NMakefile
 
-An NMakefile compiles is written in coffee script, but briefer.
-The NMake library inserts all the ugly boilerplate.
+An NMakefile compiles is written in coffee script, but without the boilerplate.
+NMake defines a template for the file in the Mustache template language.
+
 The _hello world_ of NMakefile is:
 
 	hello:
