@@ -1,0 +1,11 @@
+release: init
+	info 'Make Release'
+	next()
+
+init:
+	info 'Make Init'
+	next()
+
+default: release
+	info 'Making Default!'
+	next()
